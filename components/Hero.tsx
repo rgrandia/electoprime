@@ -28,8 +28,8 @@ export default function Hero({ onEnter }: HeroProps) {
             key={i}
             className="absolute rounded-full"
             style={{
-              width: 4 + Math.random() * 8,
-              height: 4 + Math.random() * 8,
+              width: 4 + (i * 3) % 8,
+              height: 4 + (i * 5) % 8,
               background: color,
               opacity: 0.15,
               left: `${10 + (i * 9)}%`,
