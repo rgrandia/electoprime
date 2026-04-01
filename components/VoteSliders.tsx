@@ -1,11 +1,11 @@
 'use client'
 
 import { useCallback, useMemo } from 'react'
-import { Lock, Unlock, RotateCcw } from 'lucide-react'
+import { RotateCcw } from 'lucide-react'
 import { useStore } from '@/lib/store'
-import { PARTIES, getPartiesForElection, HISTORICAL_ELECTIONS } from '@/lib/data/parties'
+import { getPartiesForElection } from '@/lib/data/parties'
 import { HISTORICAL_ELECTIONS as HIST } from '@/lib/data/historical'
-import { totalVotePct, cn, formatPct } from '@/lib/utils'
+import { totalVotePct, cn } from '@/lib/utils'
 
 export default function VoteSliders() {
   const { electionType, votes, setVote, setVotes } = useStore()
@@ -28,7 +28,7 @@ export default function VoteSliders() {
   )
 
   const resetVotes = useCallback(() => {
-    const defaults = electionType === 'spain'
+    const defaults: Record<string, number> = electionType === 'spain'
       ? { PP: 30, PSOE: 29, VOX: 13, SUMAR: 13, ERC: 3, JUNTS: 2, EHBILDU: 2, PNV: 1.5, CC: 0.8, BNG: 0.7, OTROS: 5 }
       : { PSC: 28, JUNTS: 18, ERC: 14, PP: 8, ENCOMU: 7, CUP: 5, VOX: 4, AC: 4, CS: 2, OTROS: 10 }
     setVotes(defaults)
