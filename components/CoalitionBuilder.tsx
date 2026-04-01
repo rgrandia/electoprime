@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Plus, X, Check, AlertTriangle } from 'lucide-react'
 import { useStore } from '@/lib/store'
@@ -17,6 +17,13 @@ const PRESET_COALITIONS: Record<string, { label: string; parties: Record<string,
 export default function CoalitionBuilder() {
   const { result, electionType } = useStore()
   const [selectedParties, setSelectedParties] = useState<string[]>([])
+
+  // Reset selected parties when election type changes
+  const prevElectionType = useRef(electionType)
+  if (prevElectionType.current !== electionType) {
+    prevElectionType.current = electionType
+    setSelectedParties([])
+  }
 
   const parties = useMemo(
     () => getPartiesForElection(electionType).filter(p => p.id !== 'OTROS'),

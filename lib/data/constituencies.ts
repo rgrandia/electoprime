@@ -42,11 +42,11 @@ export const SPAIN_CONSTITUENCIES: Constituency[] = [
   // ── MADRID ──
   { id: 'M', name: 'Madrid', seats: 37, electionType: 'spain', autonomia: 'Madrid', mapRow: 4, mapCol: 5 },
   // ── CASTELLA - LA MANXA ──
-  { id: 'AB', name: 'Albacete', seats: 4, electionType: 'spain', autonomia: 'C.-La Manxa', mapRow: 5, mapCol: 7 },
-  { id: 'CR', name: 'Ciudad Real', seats: 5, electionType: 'spain', autonomia: 'C.-La Manxa', mapRow: 5, mapCol: 6 },
-  { id: 'CU', name: 'Conca', seats: 3, electionType: 'spain', autonomia: 'C.-La Manxa', mapRow: 4, mapCol: 7 },
-  { id: 'GU', name: 'Guadalajara', seats: 3, electionType: 'spain', autonomia: 'C.-La Manxa', mapRow: 3, mapCol: 6 },
-  { id: 'TO', name: 'Toledo', seats: 6, electionType: 'spain', autonomia: 'C.-La Manxa', mapRow: 5, mapCol: 5 },
+  { id: 'AB', name: 'Albacete', seats: 4, electionType: 'spain', autonomia: 'Cast.-La Manxa', mapRow: 5, mapCol: 7 },
+  { id: 'CR', name: 'Ciudad Real', seats: 5, electionType: 'spain', autonomia: 'Cast.-La Manxa', mapRow: 5, mapCol: 6 },
+  { id: 'CU', name: 'Conca', seats: 3, electionType: 'spain', autonomia: 'Cast.-La Manxa', mapRow: 4, mapCol: 7 },
+  { id: 'GU', name: 'Guadalajara', seats: 3, electionType: 'spain', autonomia: 'Cast.-La Manxa', mapRow: 3, mapCol: 6 },
+  { id: 'TO', name: 'Toledo', seats: 6, electionType: 'spain', autonomia: 'Cast.-La Manxa', mapRow: 5, mapCol: 5 },
   // ── EXTREMADURA ──
   { id: 'BA', name: 'Badajoz', seats: 6, electionType: 'spain', autonomia: 'Extremadura', mapRow: 6, mapCol: 3 },
   { id: 'CC', name: 'Càceres', seats: 4, electionType: 'spain', autonomia: 'Extremadura', mapRow: 5, mapCol: 3 },
